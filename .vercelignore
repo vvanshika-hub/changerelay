@@ -1,0 +1,15 @@
+.env
+.env.*
+**/.env
+**/.env.*
+data/
+node_modules/
+.git/
+.vercel/
+work/
+*.test.mjs
+test.mjs
+database/
+skills/
+Start-ChangeRelay.cmd
+viasocket-login.mjs

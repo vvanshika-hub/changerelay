@@ -1,0 +1,21 @@
+{
+  "name": "changerelay",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "test": "node --test",
+    "check": "node --check server.mjs && node --check auth.mjs && node --check auth-routes.mjs && node --check public/app.js && node --check public/auth.js && node --check live-routes.mjs && node --check live-engine.mjs && node --check supabase-store.mjs && node --check worker.mjs && node --check public/workspace.js && node --check ai-intent.mjs",
+    "test:database": "node database/validate-schema.mjs"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.118.0",
+    "viasocket-apps": "0.14.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.13"
+  }
+}

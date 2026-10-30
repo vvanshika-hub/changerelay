@@ -1,0 +1,25 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "fluid": true,
+  "buildCommand": "node deployment/prepare-vercel.mjs",
+  "installCommand": "npm ci --omit=dev",
+  "outputDirectory": "deployment/static",
+  "functions": {
+    "api/index.mjs": {
+      "maxDuration": 300,
+      "includeFiles": "{public/**,node_modules/viasocket-apps/dist/esm/browser.js}",
+      "excludeFiles": "{data/**,data/**/.*,data/**/.*/**,.env,.env.*,**/.env,**/.env.*,work/**,work/**/.*,**/*.test.mjs}"
+    }
+  },
+  "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
+  "daemons": {
+    "worker": {
+      "root": ".",
+      "entrypoint": "Dockerfile.worker",
+      "instances": { "iad1": 1 },
+      "resources": { "requests": { "memory": "1Gi" } },
+      "terminationGracePeriodSeconds": 30
+    }
+  }
+}

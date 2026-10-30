@@ -1,0 +1,8 @@
+{
+  "readOnly": true,
+  "knownMessageIdReconciled": true,
+  "receiptSearchReconciled": true,
+  "acknowledged": false,
+  "readCalls": 3,
+  "newEmailsSent": 0
+}

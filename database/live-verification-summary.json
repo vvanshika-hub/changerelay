@@ -1,0 +1,47 @@
+{
+  "startedAt": "2026-10-30T10:28:47.677Z",
+  "checks": [
+    {
+      "name": "Two confirmed disposable accounts sign in and pass real getUser",
+      "status": "pass"
+    },
+    {
+      "name": "Owner SELECT sees own workspace and foreign owner SELECT returns no row",
+      "status": "pass"
+    },
+    {
+      "name": "Owner UPDATE succeeds while foreign UPDATE cannot alter the participant",
+      "status": "pass"
+    },
+    {
+      "name": "Forged owner, parent workspace and server-only column writes are denied",
+      "status": "pass"
+    },
+    {
+      "name": "Anon has no public table read; private schema remains unexposed",
+      "status": "pass"
+    },
+    {
+      "name": "Anon and authenticated users cannot execute operational private RPCs",
+      "status": "pass"
+    },
+    {
+      "name": "Service RPC explicitly rejects foreign owner/workspace pairs",
+      "status": "pass"
+    },
+    {
+      "name": "Independent concurrent HTTP CAS requests yield one winner and retain revision 2",
+      "status": "pass"
+    }
+  ],
+  "createdUsers": 2,
+  "cleanedUsers": 2,
+  "cleanedWorkspaces": 2,
+  "cleanupFailures": [],
+  "limitations": [
+    "This is a focused live API/Auth/RLS/CAS suite, not a full Supabase advisor or pgTAP run."
+  ],
+  "finishedAt": "2026-10-30T10:28:55.919Z",
+  "passed": 8,
+  "failed": 0
+}

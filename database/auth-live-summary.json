@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "checks": {
+    "realSignInVerified": true,
+    "httpOnlyCookie": true,
+    "sessionSurvivesServiceRestart": true,
+    "logoutBlocksReplayAfterRestart": true
+  },
+  "newEmailsSent": 0
+}
